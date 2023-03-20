@@ -1,0 +1,45 @@
+.purple{
+     background: #06283D;
+}
+.ocean_background {
+    background: linear-gradient(to bottom, #B3E8E5, #0AA1DD);
+}
+.grass {
+    background: linear-gradient(to bottom, #98DFD6, #7FB77E);
+    padding: 3rem;
+    margin: 3rem;
+}
+.ocean{
+    background: linear-gradient(to bottom, #B3E8E5, #0AA1DD);
+    margin-top: 0;
+    height: 640px;
+}
+.heading {
+    color: white;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.space {
+    padding: 3rem;
+    font-size: 2.5rem;
+    line-height: 1.5;
+}
+.btn-style{
+    margin: 4rem 2rem;
+    width: 120px;
+}
+.red:hover {
+    color: red;
+}
+.green:hover {
+    color: green;
+}
+.list-text {
+    line-height: 1.5;
+    font-size: 2rem;
+    color: #2C3333;
+    font-weight: bold;
+}
+.icon-space {
+    padding: 0 1.5rem;
+}

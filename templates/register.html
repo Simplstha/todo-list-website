@@ -1,0 +1,11 @@
+{% include 'header.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+<div class="ocean ">
+    <h2 class="space text-center">Sign up for free to create your profile!</h2>
+    <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto content text-left">
+            {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "dark"}) }}
+        </div>
+    </div>
+
+</div>

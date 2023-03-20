@@ -1,0 +1,38 @@
+{% include 'header.html' %}
+<div style="padding: 1.5rem">
+    <h1>{{ current_user.name }}</h1>
+    <form method="POST">
+        <input  style="width:60%; height:4rem;" placeholder="Type tour task here" name="task">
+        <input type="date" name="due_date">
+        <button type="submit">ok</button>
+    </form>
+
+{% if items[0] %}
+    <ol>
+       {% for item in items %}
+        <li class="list-text">
+            <a class="btn btn-lg" href="{{ url_for('done', list_id=item.id) }}"><i class="fa fa-check-circle fa-2x green"></i></a>
+            {{item.list_item}} {{" -- Due  :  "+item.due_date.replace('-','/')}}
+            <a class="btn btn-lg" href="{{ url_for('delete', list_id=item.id) }}"><i class="fa fa-trash fa-2x red icon-space"></i></a>
+             <hr>
+        </li>
+        {% endfor %}
+    </ol>
+{% endif %}
+{% if done[0] %}
+<div class="grass">
+    <h1>Completed Tasks</h1>
+    <hr>
+    <ol>
+        {% for item in done %}
+        <li class="list-text" style="color:#4D455D">
+            <i class="fa fa-check-circle" style="color:green"></i>
+            {{ item.list }}{{ " --- Completed on  :  " + date }}
+            <a class="btn btn-lg" href="{{ url_for('del_frm_db', list_id=item.id) }}"><i class="fa fa-trash fa-2x red icon-space"></i></a>
+            <hr>
+        </li>
+        {% endfor %}
+    </ol>
+</div>
+{% endif %}
+</div>
